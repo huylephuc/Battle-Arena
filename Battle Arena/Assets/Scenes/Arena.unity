@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 1
   m_PivotPosition: {x: 0, y: 0, z: 0}
-  m_UnmodifiedMeshVersion: 2533
+  m_UnmodifiedMeshVersion: 2554
   m_ShapeBox:
     m_Center: {x: 29.944939, y: 5.6630387, z: -29.944931}
     m_Extent: {x: 29.944939, y: 0.19999981, z: 29.944931}
@@ -11956,7 +11956,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 2408546}
-  m_VersionIndex: 2533
+  m_VersionIndex: 2554
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
