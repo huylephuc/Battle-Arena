@@ -1146,9 +1146,9 @@ MonoBehaviour:
   aimVirtualCamera: {fileID: 898552577}
   aimSensitivity: 0.5
   normalSensitivity: 1
-  aimColliderMask:
+  aimColliderLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
 --- !u!1 &1764214107
 GameObject:
   m_ObjectHideFlags: 0
