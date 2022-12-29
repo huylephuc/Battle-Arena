@@ -9,7 +9,7 @@ public class ThirdPersonShooter : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera aimVirtualCamera;
     [SerializeField] private float aimSensitivity;
     [SerializeField] private float normalSensitivity;
-    [SerializeField] private LayerMask aimColliderMask;
+    [SerializeField] private LayerMask aimColliderLayerMask;
 
     private ThirdPersonController thirdPersonController;
     private StarterAssetsInputs starterAssetsInputs;
@@ -21,21 +21,28 @@ public class ThirdPersonShooter : MonoBehaviour
     }
     private void Update()
     {
+        Vector3 mouseWorldPosition = Vector3.zero;
+
+        Vector2 centerPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
+        Ray ray = Camera.main.ScreenPointToRay(centerPoint);
+        if (Physics.Raycast(ray, out RaycastHit raycastHit, 1000f, aimColliderLayerMask))
+        {
+            mouseWorldPosition = raycastHit.point;
+        }
         if (starterAssetsInputs.aim)
         {
             aimVirtualCamera.gameObject.SetActive(true);
             thirdPersonController.SetSensitivity(aimSensitivity);
+            
+            Vector3 worldAimTarget = mouseWorldPosition;
+            worldAimTarget.y = transform.position.y;
+            Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
+
+            transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 20.0f);
         } else
         {
             aimVirtualCamera.gameObject.SetActive(false);
             thirdPersonController.SetSensitivity(normalSensitivity);
-        }
-
-        Vector2 centerPoint = new Vector2(Screen.width / 2, Screen.height / 2);
-        Ray ray = Camera.main.ScreenPointToRay(centerPoint);
-        if (Physics.Raycast(ray, out RaycastHit raycastHit, 1000f, aimColliderMask))
-        {
-            transform.position = raycastHit.point;
         }
     }
 }

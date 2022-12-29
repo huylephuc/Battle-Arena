@@ -44,6 +44,7 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
+
 		public void OnAim(InputValue value)
 		{
 			AimInput(value.isPressed);
@@ -70,6 +71,7 @@ namespace StarterAssets
 		{
 			sprint = newSprintState;
 		}
+
 		public void AimInput(bool newAimState)
 		{
 			aim = newAimState;
