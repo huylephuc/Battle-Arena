@@ -52,16 +52,16 @@ public class ThirdPersonShooter : MonoBehaviour
             thirdPersonController.SetRotateOnMove(true);
         }
 
-        /*if (starterAssetsInputs.shoot)
+        if (starterAssetsInputs.shoot)
         {
             if (hitTransform != null)
             {
                 if (hitTransform.GetComponent<Target>() != null)
                 {
-                    Instantiate()
+                    Debug.Log("Hit");
                 }
             }
             starterAssetsInputs.shoot = false;
-        }*/
+        }
     }
 }
