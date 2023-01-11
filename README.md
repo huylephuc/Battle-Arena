@@ -1,2 +1,2 @@
 # Battle-Arena
-3D Unity Fighting game
+Third person shooter 3D Unity game
