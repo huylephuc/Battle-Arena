@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ButtonClicked : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
@@ -25,6 +26,6 @@ public class ButtonClicked : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
     public void Clicked()
     {
-
+        SceneManager.LoadScene("Connect");
     }
 }
