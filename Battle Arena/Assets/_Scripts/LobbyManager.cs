@@ -26,11 +26,6 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     public GameObject playButton;
 
-    /*public void Awake()
-    {
-        PhotonNetwork.ConnectUsingSettings();
-    }*/
-
     public void OnClickCreate()
     {
         if (roomInputField.text.Length >= 1)
@@ -125,7 +120,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-        if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount >= 1 )
+        if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount >= 2)
         {
             playButton.SetActive(true);
         }
