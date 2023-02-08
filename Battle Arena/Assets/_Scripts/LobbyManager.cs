@@ -26,15 +26,10 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     public GameObject playButton;
 
-    public void Awake()
+    /*public void Awake()
     {
         PhotonNetwork.ConnectUsingSettings();
-    }
-
-    public override void OnConnectedToMaster()
-    {
-        PhotonNetwork.JoinLobby();
-    }
+    }*/
 
     public void OnClickCreate()
     {
@@ -93,6 +88,11 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         lobbyPanel.SetActive(true);
     }
 
+    public override void OnConnectedToMaster()
+    {
+        PhotonNetwork.JoinLobby();
+    }
+
     void UpdatePlayerList()
     {
         foreach (PlayerItem item in playerItemsList)
@@ -110,7 +110,6 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         {
             PlayerItem newPlayerItem = Instantiate(playerItemPrefab, playerItemParent);
             newPlayerItem.SetPlayerInfo(player.Value);
-            playerItemsList.Add(newPlayerItem);
         }
     }
 
@@ -126,7 +125,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-        if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount >= 2)
+        if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount >= 1 )
         {
             playButton.SetActive(true);
         }

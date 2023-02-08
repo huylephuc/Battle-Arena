@@ -6,7 +6,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
 
-public class PlayerItem : MonoBehaviour
+public class PlayerItem : MonoBehaviourPunCallbacks
 {
     public TMP_Text playerName;
 
