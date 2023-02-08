@@ -16,7 +16,7 @@ public class HitCollider : MonoBehaviour
         {
             if(somebody != null && somebody != owner)
             {
-                somebody.Hurt(damage);
+                somebody.hurt(damage);
             }
         }
     }

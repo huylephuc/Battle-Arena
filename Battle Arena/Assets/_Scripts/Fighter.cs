@@ -9,7 +9,7 @@ public class Fighter : MonoBehaviour
         HUMAN, AI
     }
     public static float maxHealth = 100f;
-    public float life = maxHealth;
+    public float life = 100f;
     public string fighterName;
     public Fighter opponent;
 
@@ -97,7 +97,7 @@ public class Fighter : MonoBehaviour
         }
     }
 
-    public virtual void Hurt(float damage)
+    public virtual void hurt(float damage)
     {
         if (life >= damage)
         {
@@ -122,7 +122,7 @@ public class Fighter : MonoBehaviour
 
     public Rigidbody body
     {
-        get 
+        get
         { 
             return myBody; 
         }

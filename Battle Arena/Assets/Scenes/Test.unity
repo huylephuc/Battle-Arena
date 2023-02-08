@@ -471,7 +471,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.26614994
+  m_Radius: 0.5
   m_Height: 1.8189282
   m_Direction: 1
   m_Center: {x: -0, y: 0.9, z: 0}
@@ -489,7 +489,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 118
   m_CollisionDetection: 0
 --- !u!114 &500491074
 MonoBehaviour:
@@ -503,6 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b582edf25e863b5458031b7854065525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  life: 100
   fighterName: BlueMan
   opponent: {fileID: 1813059697}
   player: 0
@@ -814,6 +815,10 @@ PrefabInstance:
       propertyPath: punchName
       value: RightPunch
       objectReference: {fileID: 0}
+    - target: {fileID: 3313621617596592779, guid: 7dd36eff846896746b559bbcb065818a, type: 3}
+      propertyPath: m_Radius
+      value: 1.27
+      objectReference: {fileID: 0}
     - target: {fileID: 4535295824629104127, guid: 7dd36eff846896746b559bbcb065818a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1027,7 +1032,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.2661499
+  m_Radius: 0.5
   m_Height: 1.818928
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
@@ -1045,7 +1050,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 118
   m_CollisionDetection: 0
 --- !u!114 &1813059697
 MonoBehaviour:
@@ -1059,6 +1064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b582edf25e863b5458031b7854065525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  life: 100
   fighterName: RedGuy
   opponent: {fileID: 500491074}
   player: 0
