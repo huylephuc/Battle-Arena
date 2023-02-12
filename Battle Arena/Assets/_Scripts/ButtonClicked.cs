@@ -26,6 +26,6 @@ public class ButtonClicked : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
     public void Clicked()
     {
-        SceneManager.LoadScene("Loading");
+        SceneManager.LoadScene("1");
     }
 }
