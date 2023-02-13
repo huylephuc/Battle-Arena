@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemInfo : ScriptableObject
+[CreateAssetMenu(menuName = "FPS/New Gun")]
+public class GunInfo : ItemInfo
 {
-    public string itemName;
+    
 }
