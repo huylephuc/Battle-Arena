@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using System.IO;
+using Photon.Realtime;
+using System.Linq;
 
 public class PlayerManager : MonoBehaviour
 {

@@ -171,15 +171,12 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 
     public void TakeDamage(float damage)
     {
-        PV.RPC("PRC_TakeDamage", RpcTarget.All, damage);
+        PV.RPC(nameof(PRC_TakeDamage), PV.Owner, damage);
     }
 
     [PunRPC]
     void PRC_TakeDamage(float damage)
     {
-        if (!PV.IsMine)
-            return;
-
         currentHealth -= damage;
 
         healthbarImage.fillAmount = currentHealth / maxHealth;
